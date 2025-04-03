@@ -1,9 +1,7 @@
 package br.com.projeto.api.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import br.com.projeto.api.model.PessoaModel;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping
@@ -22,5 +20,10 @@ public class Controller {
     @GetMapping("/boasvindas")
     public String boasVindas() {
         return "Seja bem-vindo(a)";
+    }
+
+    @PostMapping("/pessoa")
+    public PessoaModel pessoa(@RequestBody PessoaModel pessoaModel) {
+        return pessoaModel;
     }
 }
