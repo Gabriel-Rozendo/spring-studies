@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
     @GetMapping("/ola")
-    public String ola() {
+    public String mensagem() {
         return "Olá, Mundo!";
     }
 }
